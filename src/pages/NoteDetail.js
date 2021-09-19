@@ -4,15 +4,17 @@ import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
-import { CustomButtom } from '../components/CustomButton'
 import { deleteNote, updateNote } from '../redux/actions'
+import { CustomButtom } from '../components/CustomButton'
+import { BackButton } from '../components/BackButton'
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  width: 100%;
 `
 
 const Title = styled.h1`
@@ -37,11 +39,20 @@ const Content = styled.textarea`
 const ButtonsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 20%;
+  margin-top: 20px;
+`
+
+const BackButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
 `
 
 export const NoteDetail = () => {
   const { id, content } = useSelector(state => state.currentNote)
-  const notes = useSelector(state => state.notes)
   const [value, setValue] = useState(content)
   const dispatch = useDispatch()
   const history = useHistory()
@@ -73,13 +84,16 @@ export const NoteDetail = () => {
         required
       />
       <ButtonsContainer>
-        <CustomButtom color='blue' onClick={handleUpdate}>
-          Edit
+        <CustomButtom color='#5F939A' onClick={handleUpdate}>
+          Update
         </CustomButtom>
-        <CustomButtom color='red' onClick={handleDelete}>
+        <CustomButtom color='#FF616D' onClick={handleDelete}>
           Delete
         </CustomButtom>
       </ButtonsContainer>
+      <BackButtonContainer>
+        <BackButton to='/'>&#8592; Back</BackButton>
+      </BackButtonContainer>
     </Container>
   )
 }

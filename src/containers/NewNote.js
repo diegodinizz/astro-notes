@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { useDispatch } from 'react-redux'
 
 import { addNote } from '../redux/actions'
+import { CustomButtom } from '../components/CustomButton'
 
 const Container = styled.div`
   display: flex;
@@ -41,25 +42,6 @@ const Content = styled.textarea`
   }
 `
 
-const Button = styled.button`
-  font-size: 1.5rem;
-  padding: 0.5rem;
-  border: none;
-  outline: none;
-  box-sizing: border-box;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  background-color: #e0e0e0;
-  color: grey;
-  width: 50%;
-  text-align: center;
-  margin: 0.5rem;
-
-  &:hover {
-    background-color: #ccc;
-  }
-`
-
 export const NewNote = () => {
   const [note, setNote] = useState('')
   const dispatch = useDispatch()
@@ -81,7 +63,7 @@ export const NewNote = () => {
           onChange={event => setNote(event.target.value)}
           required
         />
-        <Button type='submit'>Add Note</Button>
+        <CustomButtom color='#7C83FD' type='submit'>ADD NOTE</CustomButtom>
       </form>
     </Container>
   )
