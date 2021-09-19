@@ -13,7 +13,23 @@ const Container = styled(Link)`
   width: 50%;
   cursor: pointer;
   text-decoration: none;
-  color: #41444b;
+  color: #545454;
+  padding: 10px;
+  margin-bottom: 20px;
+`
+
+const Content = styled.div`
+  box-sizing: content-box;
+  font-weight: 700;
+  font-size: 1.5em;
+  /* max-width: 400px; */
+  overflow: hidden;
+`
+
+const Date = styled.div`
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 10px;
 `
 
 const ButtonsContainer = styled.div``
@@ -25,7 +41,8 @@ export const Note = ({ details }) => {
 
   return (
     <Container to={`/notes/${id}`}>
-      {content}
+      <Content>{content}</Content>
+      <Date>{createdAt}</Date>
       {/* <ButtonsContainer>
         <CustomButtom color='blue'>Edit</CustomButtom>
         <CustomButtom onClick={() => dispatch(deleteNote(id))} color='red'>

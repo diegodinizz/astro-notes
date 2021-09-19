@@ -1,4 +1,5 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'
+import moment from 'moment'
 
 import { NotesActionTypes } from './types'
 
@@ -9,9 +10,10 @@ const INITIAL_STATE = {
 export const notesReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case NotesActionTypes.ADD_NOTE:
+      // const date = new Date()
       const newNote = {
         id: uuidv4(),
-        createdAt: Date.now(),
+        createdAt: moment().format('dddd, MMMM Do YYYY'),
         content: action.payload
       }
       return {

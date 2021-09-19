@@ -8,7 +8,7 @@ import { addNote } from '../redux/actions'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 50%;
 
@@ -30,10 +30,14 @@ const Content = styled.textarea`
   box-shadow: 1px 1px 1px #999;
   resize: none;
   width: 27vw;
-  height: 150px;
+  height: 100px;
   font-size: 18px;
   color: grey;
   outline: none;
+
+  ::placeholder {
+    color: gainsboro;
+  }
 `
 
 const Button = styled.button`

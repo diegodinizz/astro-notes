@@ -14,11 +14,12 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 0.5rem;
 `
 
 export const NotesList = () => {
   const notes = useSelector(state => state.notes)
+
+  console.log(notes)
 
   return (
     <Container>
