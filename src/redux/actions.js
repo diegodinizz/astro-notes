@@ -14,3 +14,8 @@ export const setCurrentNote = id => ({
   type: NotesActionTypes.SET_CURRENT_NOTE,
   payload: id
 })
+
+export const updateNote = (id, content) => ({
+  type: NotesActionTypes.UPDATE_NOTE,
+  payload: { id, content }
+})

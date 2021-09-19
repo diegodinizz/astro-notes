@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
 import { CustomButtom } from '../components/CustomButton'
-import { deleteNote } from '../redux/actions'
+import { deleteNote, updateNote } from '../redux/actions'
 
 const Container = styled.div`
   display: flex;
@@ -16,8 +16,9 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 40px 0;
 `
 
 const Content = styled.textarea`
@@ -40,13 +41,17 @@ const ButtonsContainer = styled.div`
 
 export const NoteDetail = () => {
   const { id, content } = useSelector(state => state.currentNote)
+  const notes = useSelector(state => state.notes)
   const [value, setValue] = useState(content)
   const dispatch = useDispatch()
   const history = useHistory()
 
-  function handleDelete (event) {
-    event.preventDefault()
+  function handleUpdate () {
+    dispatch(updateNote(id, value))
+    history.push('/')
+  }
 
+  function handleDelete () {
     const confirmed = window.confirm(
       'Are you sure you want to delete this note?'
     )
@@ -68,7 +73,9 @@ export const NoteDetail = () => {
         required
       />
       <ButtonsContainer>
-        <CustomButtom color='blue'>Edit</CustomButtom>
+        <CustomButtom color='blue' onClick={handleUpdate}>
+          Edit
+        </CustomButtom>
         <CustomButtom color='red' onClick={handleDelete}>
           Delete
         </CustomButtom>

@@ -12,8 +12,9 @@ const Container = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 40px 0;
 `
 
 export const NotesList = () => {

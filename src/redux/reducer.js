@@ -1,5 +1,5 @@
 import { NotesActionTypes } from './types'
-import { addNewNote } from './utils'
+import { addNewNote, updateExistingNote } from './utils'
 
 const INITIAL_STATE = {
   notes: [],
@@ -22,8 +22,22 @@ export const notesReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         currentNote: action.payload
-        // currentNote: state.notes.find(note => note.id === action.payload)
       }
+    case NotesActionTypes.UPDATE_NOTE:
+      return {
+        ...state,
+        notes: updateExistingNote(state.notes, action.payload)
+      }
+    //   notes: state.notes.map(note => {
+    //     if (note.id === action.payload.id) {
+    //       return {
+    //         ...note,
+    //         ...action.payload
+    //       }
+    //     }
+    //     return note
+    //   })
+    // }
     default:
       return state
   }
