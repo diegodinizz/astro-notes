@@ -21,8 +21,8 @@ export const NotesList = () => {
   return (
     <Container>
       <Title>Notes List</Title>
-      {notes.map(({ id, content }) => (
-        <Note key={id} text={content} />
+      {notes.map(note => (
+        <Note key={note.id} details={note} />
       ))}
     </Container>
   )

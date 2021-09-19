@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import styled from 'styled-components'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import { addNote } from '../redux/actions'
 
@@ -67,6 +67,7 @@ export const NewNote = () => {
       <form onSubmit={handleSubmit}>
         <Content
           value={note}
+          placeholder="Enter your note here"
           onChange={event => setNote(event.target.value)}
           required
         />
