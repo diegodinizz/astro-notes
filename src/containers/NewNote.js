@@ -9,13 +9,18 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 50%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-weight: 400;
 `
 
 const Content = styled.textarea`
@@ -67,7 +72,7 @@ export const NewNote = () => {
       <form onSubmit={handleSubmit}>
         <Content
           value={note}
-          placeholder="Enter your note here"
+          placeholder='Enter your note here'
           onChange={event => setNote(event.target.value)}
           required
         />

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 import logo from '../assets/Astrosat-logo-300x300.png'
 
@@ -7,10 +8,9 @@ const Container = styled.div`
   display: flex;
   padding: 0 15rem;
   height: 100px;
-  width: 100%;
 `
 
-const LogoWrapper = styled.div`
+const LogoWrapper = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -31,7 +31,7 @@ const Title = styled.h1`
 
 export const Header = () => (
   <Container>
-    <LogoWrapper>
+    <LogoWrapper to={'/'}>
       <Logo src={logo} alt='Astrosat Logo' />
       <Title>astronotes</Title>
     </LogoWrapper>

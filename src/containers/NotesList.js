@@ -6,12 +6,14 @@ import { Note } from '../components/Note'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50%;
 `
 
 const Title = styled.h1`
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 0.5rem;
 `
 
