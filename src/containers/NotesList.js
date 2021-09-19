@@ -19,8 +19,6 @@ const Title = styled.h1`
 export const NotesList = () => {
   const notes = useSelector(state => state.notes)
 
-  console.log(notes)
-
   return (
     <Container>
       <Title>Notes List</Title>

@@ -15,6 +15,7 @@ const LogoWrapper = styled(Link)`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 `
 
 const Logo = styled.img`

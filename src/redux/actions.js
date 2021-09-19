@@ -9,3 +9,8 @@ export const deleteNote = content => ({
   type: NotesActionTypes.DELETE_NOTE,
   payload: content
 })
+
+export const setCurrentNote = id => ({
+  type: NotesActionTypes.SET_CURRENT_NOTE,
+  payload: id
+})
