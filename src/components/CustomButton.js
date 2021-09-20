@@ -15,7 +15,6 @@ const Container = styled.button`
   margin: 1rem;
   border-radius: 5px;
   box-shadow: 1px 1px 1px #999;
-  max-width: 200px;
 `
 
 export const CustomButtom = ({ children, color, onClick }) => (

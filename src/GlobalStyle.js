@@ -1,8 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+
+*, html, body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
  body {
-   margin: 0;
    background-color: #f6f6f6;
    font-family: 'Nunito Sans', sans-serif;
  }

@@ -11,9 +11,7 @@ import { BackButton } from '../components/BackButton'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  /* margin: 0 auto; */
   width: 100%;
 `
 
@@ -30,7 +28,7 @@ const Content = styled.textarea`
   box-shadow: 1px 1px 1px #999;
   resize: none;
   width: 27vw;
-  height: 100px;
+  height: 150px;
   font-size: 18px;
   color: grey;
   outline: none;

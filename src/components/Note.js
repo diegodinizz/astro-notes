@@ -7,32 +7,29 @@ import { setCurrentNote } from '../redux/actions'
 const Container = styled(Link)`
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
-  border: 1px solid #52575d;
-  /* border-radius: 5px; */
   width: 50%;
   height: auto;
   cursor: pointer;
   text-decoration: none;
   color: #545454;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 30px;
-  background-color: #FFF6CD;
+  background-color: #fff6cd;
   transform: translateZ(0.1);
   transition: transform 0.25s ease-out;
   box-shadow: 1px 1px 1px #999;
-  
+
   :hover {
     transform: scale(1.05);
   }
 `
 
 const Content = styled.p`
-  box-sizing: content-box;
   font-weight: 700;
   font-size: 1.3em;
   word-break: break-word;
   margin: 10px 0;
+  white-space: pre-wrap;
 `
 
 const Date = styled.p`
@@ -43,8 +40,6 @@ const Date = styled.p`
 
 export const Note = ({ details }) => {
   const { id, content, createdAt, updatedAt } = details
-
-  console.log(details)
 
   const dispatch = useDispatch()
 

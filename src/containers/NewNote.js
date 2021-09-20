@@ -9,13 +9,17 @@ import { CustomButtom } from '../components/CustomButton'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: center; */
   align-items: center;
   width: 50%;
 
   form {
     display: flex;
     flex-direction: column;
+  }
+
+  button {
+    margin: 30px auto;
   }
 `
 
@@ -32,7 +36,7 @@ const Content = styled.textarea`
   box-shadow: 1px 1px 1px #999;
   resize: none;
   width: 27vw;
-  height: 100px;
+  height: 150px;
   font-size: 18px;
   color: grey;
   outline: none;
