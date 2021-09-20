@@ -9,7 +9,6 @@ import { CustomButtom } from '../components/CustomButton'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 50%;
 
@@ -44,6 +43,18 @@ const Content = styled.textarea`
   ::placeholder {
     color: gainsboro;
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 35vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 45vw;
+  }
+
+  @media screen and (max-width: 414px) {
+    width: 70vw;
+  }
 `
 
 export const NewNote = () => {
@@ -67,7 +78,7 @@ export const NewNote = () => {
           onChange={event => setNote(event.target.value)}
           required
         />
-        <CustomButtom color='#7C83FD' type='submit'>ADD NOTE</CustomButtom>
+        <CustomButtom color='#00A19D' type='submit'>ADD NOTE</CustomButtom>
       </form>
     </Container>
   )

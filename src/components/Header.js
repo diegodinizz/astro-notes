@@ -8,6 +8,11 @@ const Container = styled.div`
   display: flex;
   padding: 0 15rem;
   height: 100px;
+
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+    padding: 0;
+  }
 `
 
 const LogoWrapper = styled(Link)`

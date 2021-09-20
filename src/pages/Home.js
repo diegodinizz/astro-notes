@@ -6,6 +6,11 @@ import { NotesList } from '../containers/NotesList'
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Home = () => (

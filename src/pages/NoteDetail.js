@@ -32,6 +32,18 @@ const Content = styled.textarea`
   font-size: 18px;
   color: grey;
   outline: none;
+
+  @media screen and (max-width: 1024px) {
+    width: 35vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 45vw;
+  }
+
+  @media screen and (max-width: 414px) {
+    width: 70vw;
+  }
 `
 
 const ButtonsContainer = styled.div`
@@ -40,6 +52,10 @@ const ButtonsContainer = styled.div`
   justify-content: space-between;
   width: 20%;
   margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    width: unset;
+  }
 `
 
 const BackButtonContainer = styled.div`
@@ -47,6 +63,10 @@ const BackButtonContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 30%;
+
+  @media screen and (max-width: 768px) {
+    width: unset;
+  }
 `
 
 export const NoteDetail = () => {

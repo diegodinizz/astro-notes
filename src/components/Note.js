@@ -22,6 +22,18 @@ const Container = styled(Link)`
   :hover {
     transform: scale(1.05);
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 85%;
+  }
+
+  @media screen and (max-width: 414px) {
+    width: 100%;
+  }
 `
 
 const Content = styled.p`
@@ -30,12 +42,20 @@ const Content = styled.p`
   word-break: break-word;
   margin: 10px 0;
   white-space: pre-wrap;
+
+  @media screen and (max-width: 414px) {
+    font-size: 1em;
+  }
 `
 
 const Date = styled.p`
   font-size: 1em;
   font-weight: 400;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
+
+  @media screen and (max-width: 414px) {
+    font-size: 0.7em;
+  }
 `
 
 export const Note = ({ details }) => {
