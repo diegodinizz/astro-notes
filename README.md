@@ -2,7 +2,7 @@
 
 https://astro-notes.herokuapp.com
 
-The Astro Notes is an application built with React, Redux, Styled Components, Moment.js and hosted on GitHub Pages. Also, hosted on Heroku.
+The Astro Notes is an application built with React, Redux, Styled Components, Moment.js and hosted on Heroku.
 
 <img width="1680" alt="Screenshot 2021-09-20 at 15 34 43" src="https://user-images.githubusercontent.com/47988806/134020903-5c36926c-51aa-4107-a486-915cf87b2b2c.png">
 
@@ -50,10 +50,10 @@ The project is hosted on [Heroku](https://www.heroku.com/) at https://astro-note
 
 ## Reflection
 
-This was a weekend-long project built as a short technical exercise. The project goal included is to implement an application that allows users to add and edit notes. Each note should have its URL. Also, store persisting notes only locally.
+This was a weekend-long project built as a short technical exercise. The project goal included is to implement an application that allows users to add and edit notes. Each note should have its URL. Also, store persisting notes locally.
 
-Originally I wanted to build an application that allowed users to create new notes, list the existing ones, edit and delete notes. I started using the `create-react-app` boilerplate, then adding `Redux` to manage the state flow in the App, and `styled-components` to write actual CSS in JS code to style the components. After this, I spend time thinking and working on the store logic.
+Originally I wanted to build an application that allowed users to create new notes, list the existing ones, edit and delete notes. I started using the `create-react-app` boilerplate, then adding `Redux` to manage the state flow in the App, and `styled-components` to write actual CSS in JS code to style the components. After this, I spend time thinking and working on the logic to store the notes.
 
-One of the main challenges I ran into was to find a better way to store the notes data. This leads me to spend a few hours working on building the Redux structure to store data. Due to project time constraints, I had to decide on a simplified design to demonstrate a better visualisation of the notes.
+One of the main challenges I ran into was to find a better way to store the notes data. This leads me to spend a few hours building the Redux structure to store data. Due to project time constraints, I had to decide on a simplified design to demonstrate a better visualisation of the notes.
 
 At the end of the day, the technologies implemented in this project are React, Redux, MomentJS, UUID, Styled Components and Heroku to deploy. I choose to use few frameworks to minimize initial setup and invest more time diving into logic technological rabbit holes. In the next iteration, with more time, I would like to implement a function to sort and filter the notes, user authentication, database to store the notes, type safety method, and possibly unit tests.
