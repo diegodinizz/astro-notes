@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+## Astro Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://astro-notes.herokuapp.com
 
-## Available Scripts
+The Astro Notes is an application built with React, Redux Styled Components, Moment.js and hosted on GitHub Pages. The project is hosted on Heroku.
 
-In the project directory, you can run:
+<img width="1680" alt="Screenshot 2021-09-20 at 15 34 43" src="https://user-images.githubusercontent.com/47988806/134020903-5c36926c-51aa-4107-a486-915cf87b2b2c.png">
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
+The application allows users to create, edit and delete quick notes.
+
+## Installation
+
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+
+## Project structure
+
+To get started:
+
+```
+npm install
+```
+
+## Start Server:
+
+```
+npm start
+```
+
+Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
+## Production:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm run build
+```
 
-### `npm run build`
+## Framework used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), [Redux](https://github.com/reduxjs/react-redux), [Styled Components](https://github.com/styled-components/styled-components) and [MomentJS](https://momentjs.com). 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Hosted
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project is hosted on [Heroku](https://www.heroku.com/) at https://astro-notes.herokuapp.com
 
-### `npm run eject`
+## Reflection
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This was a weekend-long project built as a short technical exercise. The project goal included is to implement an application that allows users to add and edit notes. Each note should have its URL. Also, store persisting notes only locally.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Originally I wanted to build an application that allowed users to create new notes, list the existing ones, edit and delete notes. I started using the `create-react-app` boilerplate, then adding `Redux` to manage the state flow in the App, and `styled-components` to write actual CSS in JS code to style the components. After this, I spend time thinking and working on the store logic.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+One of the main challenges I ran into was to find a better way to store the notes data. This leads me to spend a few hours working on building the Redux structure to store data. Due to project time constraints, I had to decide on a simplified design to demonstrate a better visualisation of the notes.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+At the end of the day, the technologies implemented in this project are React, Redux, MomentJS, UUID, Styled Components and Heroku to deploy. I choose to use few frameworks to minimize initial setup and invest more time diving into logic technological rabbit holes. In the next iteration, with more time, I would like to implement a function to sort and filter the notes, user authentication, database to store the notes, type safety method, and possibly unit tests.
