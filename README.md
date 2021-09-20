@@ -2,7 +2,7 @@
 
 https://astro-notes.herokuapp.com
 
-The Astro Notes is an application built with React, Redux Styled Components, Moment.js and hosted on GitHub Pages. The project is hosted on Heroku.
+The Astro Notes is an application built with React, Redux, Styled Components, Moment.js and hosted on GitHub Pages. The project is hosted on Heroku.
 
 <img width="1680" alt="Screenshot 2021-09-20 at 15 34 43" src="https://user-images.githubusercontent.com/47988806/134020903-5c36926c-51aa-4107-a486-915cf87b2b2c.png">
 
