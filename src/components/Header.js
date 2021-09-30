@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import logo from '../assets/Astrosat-logo-300x300.png'
+import logo from '../assets/astro-logo.png'
 
 const Container = styled.div`
   background-color: #333f48;
@@ -24,7 +24,7 @@ const LogoWrapper = styled(Link)`
 `
 
 const Logo = styled.img`
-  height: 60px;
+  height: 90px;
   padding: 10px;
 `
 
